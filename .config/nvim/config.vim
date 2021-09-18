@@ -1,7 +1,7 @@
 set number
 set mouse=a
 set numberwidth=4
-set clipboard=unnamed
+set clipboard+=unnamedplus
 syntax enable
 set showcmd
 set ruler
@@ -11,7 +11,8 @@ set showmatch
 set sw=4
 set relativenumber
 set laststatus=2
-set shiftwidth=4
+"set shiftwidth=4
+set shiftwidth=2
 set expandtab
 set autoindent
 
