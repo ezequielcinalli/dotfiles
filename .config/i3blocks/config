@@ -1,0 +1,54 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+separator_block_width=15
+
+align=center
+markup=pango
+border_top=0
+border_bottom=3
+border_left=0
+border_right=0
+color=#eeeeee
+
+[cpu]
+command=/home/zeque/.config/i3blocks/cpu
+interval=persist
+markup=pango
+color=#dfd932
+border=#bfb912
+min_width=70
+align=right
+
+[memoria]
+command=/home/zeque/.config/i3blocks/memoria.sh
+interval=30
+color=#52aeff
+border=#52aeff
+
+[battery]
+command=/home/zeque/.config/i3blocks/batt.py
+markup=pango
+interval=30
+border=#3192d4
+
+[volume]
+command=/home/zeque/.config/i3blocks/volume.sh
+#LABEL=♪ 
+LABEL=VOL 
+interval=once
+signal=10
+#STEP=5%
+#MIXER=[determined automatically]
+#SCONTROL=[determined automatically]
+
+[time]
+command=date +'%d/%m/%Y %H:%M:%S'
+interval=1
