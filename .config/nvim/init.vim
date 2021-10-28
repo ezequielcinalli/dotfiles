@@ -7,5 +7,5 @@ source ~/.config/nvim/plugins.vim
 " Contiene declararaciones de mapeos
 source ~/.config/nvim/mapping.vim
 
-" Contiene configuraciones de plugins
+"Contiene configuraciones de plugins
 source ~/.config/nvim/plugins-config.vim

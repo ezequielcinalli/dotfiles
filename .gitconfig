@@ -1,3 +1,7 @@
 [user]
 	email = ezequielcinalli96@gmail.com
         name = ezequiel
+[pager]
+	branch = false
+[core]
+	editor = nvim

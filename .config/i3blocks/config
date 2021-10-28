@@ -18,6 +18,13 @@ border_left=0
 border_right=0
 color=#eeeeee
 
+[pomodoro]
+label=Pomodoro: 
+#command=pomodoro status
+command=/home/zeque/.config/i3blocks/pomodoro.sh
+interval=1
+color=#4eb560 
+
 [cpu]
 command=/home/zeque/.config/i3blocks/cpu
 interval=persist

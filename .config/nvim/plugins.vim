@@ -14,8 +14,11 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'preservim/nerdcommenter'
 " Plug 'tpope/vim-commentary'
-
 Plug 'pangloss/vim-javascript'
+
+" tmux multiplexor de terminales
+Plug 'christoomey/vim-tmux-navigator'
+
 " react
 Plug 'maxmellon/vim-jsx-pretty'
 
@@ -23,13 +26,13 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 " auto-pairs cierra automaticamente parentesis, llaves, corchetes
-Plug 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs' 
 
 " Emmet da abreviaturas html
 Plug 'mattn/emmet-vim'
 
 " vim-closetag cierra automaticamente etiquetasd html 
-"Plug 'alvan/vim-closetag'
+Plug 'alvan/vim-closetag'
 
 " vim-snippets da snippets de codigos como for+tab para crear un bucle, va
 " junto a coc-snippets
