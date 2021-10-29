@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# in server mode
+sudo apt install xorg lightdm i3 i3status suckless-tools
+
+# update packages
+sudo apt update 
+
+# install packages
+sudo apt install firefox zsh keepassxc neovim i3blocks pcmanfm feh fonts-font-awesome fonts-noto-color-emoji 
+#picom 
+
+# install fonts poweerlevel10k
+#view https://github.com/romkatv/powerlevel10k#manual-font-installation
+
+# set zsh default shell
+chsh -s $(which zsh)
+
+# install nodejs
+
+# install vim-plug 
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# install powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# install github cli
+#view https://github.com/cli/cli/blob/trunk/docs/install_linux.md
+
+# install pomodoro cli (check font for emojis)
+#view https://github.com/open-pomodoro/openpomodoro-cli#installation
+
+# copy repository files to home
+cd dotfiles
+cp -r .config/ ~/
+cp .gitconfig .p10k.zsh .zshrc ~/
