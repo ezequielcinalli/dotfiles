@@ -1,5 +1,6 @@
 # i3blocks configuration file
 #
+#
 # The i3blocks man page describes the usage of the binary,
 # and its website describes the configuration:
 #
@@ -12,15 +13,14 @@ separator_block_width=15
 
 align=center
 markup=pango
-border_top=0
-border_bottom=3
-border_left=0
-border_right=0
+#border_top=0
+#border_bottom=3
+#border_left=0
+#border_right=0
 color=#eeeeee
 
 [pomodoro]
 label=Pomodoro: 
-#command=pomodoro status
 command=/home/zeque/.config/i3blocks/pomodoro.sh
 interval=1
 color=#4eb560 
@@ -30,7 +30,7 @@ command=/home/zeque/.config/i3blocks/cpu
 interval=persist
 markup=pango
 color=#dfd932
-border=#bfb912
+#border=#bfb912
 min_width=70
 align=right
 
@@ -38,23 +38,18 @@ align=right
 command=/home/zeque/.config/i3blocks/memoria.sh
 interval=30
 color=#52aeff
-border=#52aeff
+#border=#52aeff
 
 [battery]
 command=/home/zeque/.config/i3blocks/batt.py
 markup=pango
 interval=30
-border=#3192d4
+#border=#3192d4
 
 [volume]
-command=/home/zeque/.config/i3blocks/volume.sh
-#LABEL=♪ 
-LABEL=VOL 
+command=/home/zeque/.config/i3blocks/volume-pulseaudio.sh
 interval=once
 signal=10
-#STEP=5%
-#MIXER=[determined automatically]
-#SCONTROL=[determined automatically]
 
 [time]
 command=date +'%d/%m/%Y %H:%M:%S'
