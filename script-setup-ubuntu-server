@@ -7,8 +7,10 @@ sudo apt install xorg lightdm i3 i3status suckless-tools
 sudo apt update 
 
 # install packages
-sudo apt install firefox zsh keepassxc neovim i3blocks pcmanfm feh fonts-font-awesome fonts-noto-color-emoji 
+sudo apt install firefox zsh keepassxc neovim i3blocks pcmanfm feh fonts-font-awesome fonts-noto-color-emoji pavucontrol
+
 #picom 
+#view https://github.com/yshui/picom#to-build
 
 # install fonts poweerlevel10k
 #view https://github.com/romkatv/powerlevel10k#manual-font-installation
@@ -16,11 +18,17 @@ sudo apt install firefox zsh keepassxc neovim i3blocks pcmanfm feh fonts-font-aw
 # set zsh default shell
 chsh -s $(which zsh)
 
-# install nodejs
+# install nodejs version 14
+sudo apt install curl
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt install nodejs
 
 # install vim-plug 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+# install yarn for some vim plugins post install hooks
+sudo npm i -G yarn
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

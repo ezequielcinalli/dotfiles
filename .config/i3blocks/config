@@ -46,6 +46,10 @@ markup=pango
 interval=30
 #border=#3192d4
 
+[mic volume]
+command=/home/zeque/.config/i3blocks/microphone.sh
+interval=3
+
 [volume]
 command=/home/zeque/.config/i3blocks/volume-pulseaudio.sh
 interval=once

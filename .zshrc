@@ -107,11 +107,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-alias cdp="cd $HOME/programacion"
+alias cdw="cd $HOME/downloads"
 
-alias cdh="cd $HOME/programacion/htdocs"
-
-alias cdi="cd $HOME/programacion/htdocs/IMDS-TPE-Grupo-Cart-On"
+alias cdd="cd $HOME/dev"
 
 alias v=nvim
 

@@ -227,7 +227,7 @@ bar {
     position top
     #i3bar_command i3bar -t
     status_command i3blocks
-	#height 30
+        #height 30
 	colors {
                 #background #222222ff
         background #222222
@@ -243,7 +243,7 @@ bar {
 
 client.focused #bf7500 #bf7500 #bf7500 #ffe570
 
-#exec picom
+exec picom
 exec feh --bg-fill "/home/zeque/.config/i3/manjaro.webp" 
 
 for_window [class="^.*"] border pixel 3
