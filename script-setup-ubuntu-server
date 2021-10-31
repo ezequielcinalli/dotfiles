@@ -7,7 +7,7 @@ sudo apt install xorg lightdm i3 i3status suckless-tools
 sudo apt update 
 
 # install packages
-sudo apt install firefox zsh keepassxc neovim i3blocks pcmanfm feh fonts-font-awesome fonts-noto-color-emoji pavucontrol
+sudo apt install firefox zsh keepassxc neovim i3blocks pcmanfm feh fonts-font-awesome fonts-noto-color-emoji pavucontrol xbacklight
 
 #picom 
 #view https://github.com/yshui/picom#to-build
