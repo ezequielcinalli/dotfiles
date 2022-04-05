@@ -1,21 +1,23 @@
 #!/bin/bash
 
-# actualizar paquetes
+# first step: git clone https://github.com/ezequielcinalli/dotfiles.git
+
+# update packages
 pacman -Syu
 
-#instalar paquetes
+# install packages
 pacman -S firefox git zsh keepassxc dmenu github-cli neovim ttf-font-awesome ttf-meslo-nerd-font-powerlevel10k nodejs npm feh picom
 
-#establecer zsh predeterminado
+# setup zsh default as default shell
 chsh -s $(which zsh)
 
-# instalar oh-my-zsh
+# install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# instalar powerlevel10k
+# install powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-#ingresar al repositorio y copiar archivos de configuracion al home ~/
+# enter to repository and copy files to home folder
 cd dotfiles
 cp -r .config/ ~/
-cp .gitconfig .p10k.zsh .zshrc ~/
+cp .gitconfig .p10k.zsh .zshrc .xprofile ~/
