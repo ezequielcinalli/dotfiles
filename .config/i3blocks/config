@@ -21,12 +21,12 @@ color=#eeeeee
 
 [pomodoro]
 label=Pomodoro: 
-command=/home/zeque/.config/i3blocks/pomodoro.sh
+command=~/.config/i3blocks/pomodoro.sh
 interval=1
 color=#4eb560 
 
 [cpu]
-command=/home/zeque/.config/i3blocks/cpu
+command=~/.config/i3blocks/cpu
 interval=persist
 markup=pango
 color=#dfd932
@@ -35,23 +35,23 @@ min_width=70
 align=right
 
 [memoria]
-command=/home/zeque/.config/i3blocks/memoria.sh
+command=~/.config/i3blocks/memoria.sh
 interval=30
 color=#52aeff
 #border=#52aeff
 
 [battery]
-command=/home/zeque/.config/i3blocks/batt.py
+command=~/.config/i3blocks/batt.py
 markup=pango
 interval=30
 #border=#3192d4
 
 [mic volume]
-command=/home/zeque/.config/i3blocks/microphone.sh
+command=~/.config/i3blocks/microphone.sh
 interval=3
 
 [volume]
-command=/home/zeque/.config/i3blocks/volume-pulseaudio.sh
+command=~/.config/i3blocks/volume-pulseaudio.sh
 interval=once
 signal=10
 

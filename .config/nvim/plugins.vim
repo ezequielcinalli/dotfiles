@@ -22,6 +22,9 @@ Plug 'christoomey/vim-tmux-navigator'
 " react
 Plug 'maxmellon/vim-jsx-pretty'
 
+" c# - blazor
+Plug 'jlcrochet/vim-razor'
+
 " Buscador fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
@@ -47,5 +50,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 " vim-devicoms da aspecto visual de iconos, dejar siempre al final
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" java
+Plug 'artur-shaik/vim-javacomplete2'
 
 call plug#end()
