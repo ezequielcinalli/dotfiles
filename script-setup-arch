@@ -6,7 +6,7 @@
 pacman -Syu
 
 # install packages
-pacman -S firefox git zsh keepassxc dmenu github-cli neovim ttf-font-awesome ttf-meslo-nerd-font-powerlevel10k nodejs npm feh picom
+pacman -S firefox zsh keepassxc github-cli neovim ttf-font-awesome ttf-meslo-nerd-font-powerlevel10k nodejs npm feh picom
 
 # setup zsh default as default shell
 chsh -s $(which zsh)
