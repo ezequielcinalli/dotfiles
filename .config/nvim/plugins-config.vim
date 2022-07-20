@@ -1,31 +1,22 @@
-"let g:codedark_conservative = 1
+" colors
 colorscheme codedark
-let g:airline_theme='codedark'
 
-"comentarios
+" comments
 map <Leader>/ <plug>NERDCommenterToggle
 
-"snippets
-let g:snipMate = {'snippet_version':1}
-
-"prettier
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
-"autocmd BufWritePre *.php Prettier
-"let g:prettier#config#single_quote = 'true'
-"let g:prettier#config#trailing_comma = 'all'
-
-" soporte scss para coc-css
-autocmd FileType scss setl iskeyword+=@-@
-
-" buscar con easymotion mediante 2 letras
-nmap <Leader>s <Plug>(easymotion-s2)
-
-" buscar archivos con FZF
-nnoremap <leader>f :FZF<CR>
-
-" toggle de nerdtree
+" toggle nerdtree
 nnoremap <C-t> :NERDTreeToggle<CR>
 
-let g:python3_host_prog = '/usr/bin/python3'
+" lsp luasnip
+" press <Tab> to expand or jump in a snippet. These can also be mapped separately
+" via <Plug>luasnip-expand-snippet and <Plug>luasnip-jump-next.
+imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>' 
+" -1 for jumping backwards.
+inoremap <silent> <S-Tab> <cmd>lua require'luasnip'.jump(-1)<Cr>
 
+snoremap <silent> <Tab> <cmd>lua require('luasnip').jump(1)<Cr>
+snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
+
+" For changing choices in choiceNodes (not strictly necessary for a basic setup).
+imap <silent><expr> <C-E> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-E>'
+smap <silent><expr> <C-E> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<C-E>'

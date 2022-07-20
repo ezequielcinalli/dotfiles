@@ -32,21 +32,22 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # audio keys control
-bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks 
-bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+ && pkill -RTMIN+10 i3blocks 
+bindsym XF86AudioLowerVolume exec amixer -q sset Master 5%- && pkill -RTMIN+10 i3blocks
 bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+10 i3blocks
 
 # brightness keys control
-#bindsym XF86MonBrightnessUp exec sh ~/.config/i3/brightness.sh -inc 750
-#bindsym XF86MonBrightnessDown exec sh ~/.config/i3/brightness.sh -dec 750
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec sh ~/.config/i3/brightness.sh -inc 750
+bindsym XF86MonBrightnessDown exec sh ~/.config/i3/brightness.sh -dec 750
+#bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+#bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec tilix
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -140,16 +141,16 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # automatically putting workspaces on specific screens
-workspace $ws1 output eDP1
-workspace $ws3 output eDP1
-workspace $ws5 output eDP1
-workspace $ws7 output eDP1
-workspace $ws9 output eDP1
-workspace $ws2 output HDMI1
-workspace $ws4 output HDMI1
-workspace $ws6 output HDMI1
-workspace $ws8 output HDMI1
-workspace $ws10 output HDMI1
+workspace $ws1 output eDP-1
+workspace $ws3 output eDP-1
+workspace $ws5 output eDP-1
+workspace $ws7 output eDP-1
+workspace $ws9 output eDP-1
+workspace $ws2 output HDMI-1
+workspace $ws4 output HDMI-1
+workspace $ws6 output HDMI-1
+workspace $ws8 output HDMI-1
+workspace $ws10 output HDMI-1
 
 #mouse warping and follow
 mouse_warping none
@@ -243,7 +244,8 @@ bar {
 client.focused #bf7500 #bf7500 #bf7500 #ffe570
 
 exec picom
-exec feh --bg-fill "~/.config/i3/manjaro.webp" 
+exec feh --bg-fill "/home/zeque/.config/i3/manjaro.webp" 
+exec pulseaudio
 
 for_window [class="^.*"] border pixel 3
 new_window pixel 3

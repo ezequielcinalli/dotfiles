@@ -2,14 +2,14 @@
 
 # first step: git clone https://github.com/ezequielcinalli/dotfiles.git
 
+# set mirrors - see documentation
+# https://wiki.archlinux.org/title/mirrors#Sorting_mirrors
+
 # update packages
-pacman -Syu
+sudo pacman -Syu
 
 # install packages
-pacman -S firefox zsh keepassxc github-cli neovim ttf-font-awesome ttf-meslo-nerd-font-powerlevel10k nodejs npm feh picom
-
-# setup zsh default as default shell
-chsh -s $(which zsh)
+sudo pacman -S firefox tilix zsh keepassxc github-cli neovim ttf-font-awesome nodejs npm ranger flameshot pcmanfm feh picom pacman-contrib
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -18,8 +18,15 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 git clone https://github.com/jeffreytse/zsh-vi-mode \
   $ZSH_CUSTOM/plugins/zsh-vi-mode
 
+# install vim-plug 
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
 # install powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# install pomodoro cli (check font for emojis)
+# see https://github.com/open-pomodoro/openpomodoro-cli#installation
 
 # enter to repository and copy files to home folder
 cd dotfiles

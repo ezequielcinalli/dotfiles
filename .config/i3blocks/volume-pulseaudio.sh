@@ -107,11 +107,13 @@ function set_default_playback_device_next {
 }
 
 case "$BLOCK_BUTTON" in
-    1) set_default_playback_device_next ;;
-    2) amixer -q -D $MIXER sset $SCONTROL $CAPABILITY toggle ;;
-    3) set_default_playback_device_next -1 ;;
-    4) amixer -q -D $MIXER sset $SCONTROL $CAPABILITY $AUDIO_DELTA%+ ;;
-    5) amixer -q -D $MIXER sset $SCONTROL $CAPABILITY $AUDIO_DELTA%- ;;
+    #1) set_default_playback_device_next ;;
+    #2) amixer -q -D $MIXER sset $SCONTROL $CAPABILITY toggle ;;
+    #3) set_default_playback_device_next -1 ;;
+    #4) amixer -q -D $MIXER sset $SCONTROL $CAPABILITY $AUDIO_DELTA%+ ;;
+    #5) amixer -q -D $MIXER sset $SCONTROL $CAPABILITY $AUDIO_DELTA- ;;
+    3) amixer -q -D $MIXER sset $SCONTROL $CAPABILITY $AUDIO_DELTA%+ ;;
+    1) amixer -q -D $MIXER sset $SCONTROL $CAPABILITY $AUDIO_DELTA- ;;
 esac
 
 

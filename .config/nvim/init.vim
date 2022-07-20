@@ -1,11 +1,11 @@
-" Contiene configuraciones vim 
+" Contains vim settings 
 source ~/.config/nvim/config.vim
 
-" Contiene declaracion de plugins
+" Contains plugins declarations
 source ~/.config/nvim/plugins.vim
 
-" Contiene declararaciones de mapeos
+" Contains key mappings declarations
 source ~/.config/nvim/mapping.vim
 
-"Contiene configuraciones de plugins
+" Contains plugins settings
 source ~/.config/nvim/plugins-config.vim

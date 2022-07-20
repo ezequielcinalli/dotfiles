@@ -51,7 +51,8 @@ command=~/.config/i3blocks/microphone.sh
 interval=3
 
 [volume]
-command=~/.config/i3blocks/volume-pulseaudio.sh
+#command=~/.config/i3blocks/volume-pulseaudio.sh
+command=~/.config/i3blocks/volume.sh
 interval=once
 signal=10
 
