@@ -9,7 +9,7 @@
 sudo pacman -Syu
 
 # install packages
-sudo pacman -S firefox tilix zsh keepassxc github-cli neovim ttf-font-awesome nodejs npm ranger flameshot pcmanfm feh picom pacman-contrib
+sudo pacman -S firefox kitty zsh keepassxc github-cli neovim ttf-font-awesome nodejs npm ranger flameshot pcmanfm feh picom pacman-contrib pavucontrol
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
