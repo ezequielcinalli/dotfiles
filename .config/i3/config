@@ -47,7 +47,7 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec tilix
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -245,7 +245,7 @@ client.focused #bf7500 #bf7500 #bf7500 #ffe570
 
 exec picom
 exec feh --bg-fill "/home/zeque/.config/i3/manjaro.webp" 
-exec pulseaudio
+#exec pulseaudio
 
 for_window [class="^.*"] border pixel 3
 new_window pixel 3
