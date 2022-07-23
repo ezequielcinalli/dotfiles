@@ -19,12 +19,6 @@ markup=pango
 #border_right=0
 color=#eeeeee
 
-[pomodoro]
-label=Pomodoro: 
-command=~/.config/i3blocks/pomodoro.sh
-interval=1
-color=#4eb560 
-
 [cpu]
 command=~/.config/i3blocks/cpu
 interval=persist
@@ -52,7 +46,8 @@ interval=3
 
 [volume]
 #command=~/.config/i3blocks/volume-pulseaudio.sh
-command=~/.config/i3blocks/volume.sh
+#command=~/.config/i3blocks/volume.sh
+command=~/.config/i3blocks/volume-pulsemixer.sh
 interval=once
 signal=10
 
