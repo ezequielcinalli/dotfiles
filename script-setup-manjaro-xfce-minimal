@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# update packages
+sudo pacman -Syu
+
+# install packages
+sudo pacman -S firefox kitty zsh keepassxc github-cli neovim ttf-font-awesome nodejs npm ranger flameshot pcmanfm feh picom pacman-contrib pulsemixer rofi i3-wm i3blocks dmenu
+
+sudo pacman -S dotnet-sdk
+
+pamac build visual-studio-code-bin
+
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# install zsh-vi-mode plugin for oh-my-zsh
+git clone https://github.com/jeffreytse/zsh-vi-mode \
+  $ZSH_CUSTOM/plugins/zsh-vi-mode
+
+# install zsh-autosuggestions plugin for oh-my-zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions \
+  $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
+# install vim-plug 
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+# install powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# create home directories
+cd ~/
+mkdir dev
+mkdir documents
+mkdir downloads
+mkdir screenshots
