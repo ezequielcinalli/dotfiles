@@ -6,10 +6,11 @@ sudo pacman -Syu
 # install packages
 sudo pacman -S firefox kitty zsh keepassxc github-cli neovim ttf-font-awesome nodejs npm ranger flameshot pcmanfm feh picom pacman-contrib pulsemixer rofi i3-wm i3blocks dmenu
 
-sudo pacman -S dotnet-sdk
+sudo pacman -S dotnet-sdk jdk11-openjdk
 
 pamac build visual-studio-code-bin
 pamac build aspnet-runtime-bin
+pamac build xampp
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
