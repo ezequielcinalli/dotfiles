@@ -9,6 +9,7 @@ sudo pacman -S firefox kitty zsh keepassxc github-cli neovim ttf-font-awesome no
 sudo pacman -S dotnet-sdk
 
 pamac build visual-studio-code-bin
+pamac build aspnet-runtime-bin
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
